@@ -1,0 +1,3 @@
+# THOX patch series manifest — applied top to bottom by tools/build-linux-thox.sh
+# v0.1.0: series is intentionally empty; the THOX series lands with the
+# first import from the Insider line. See README.md in this directory.

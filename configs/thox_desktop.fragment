@@ -1,0 +1,35 @@
+# linux-thox config fragment — desktop class
+# Merged over the upstream arch defconfig (x86_64 or arm64) for
+# Linux 6.12.115 by tools/build-linux-thox.sh. Intent area 4 (hardening)
+# of ../PATCHES.md. Config intent for the future thox_desktop_defconfig,
+# not the defconfig itself. Arch-neutral on purpose: symbols that exist
+# on only one arch are dropped by the merge with a warning.
+
+# --- KSPP hardening baseline ---
+CONFIG_BUG=y
+CONFIG_STRICT_KERNEL_RWX=y
+CONFIG_STRICT_MODULE_RWX=y
+CONFIG_MODULE_SIG=y
+CONFIG_HARDENED_USERCOPY=y
+CONFIG_FORTIFY_SOURCE=y
+CONFIG_STACKPROTECTOR_STRONG=y
+CONFIG_INIT_ON_ALLOC_DEFAULT_ON=y
+CONFIG_INIT_ON_FREE_DEFAULT_ON=y
+CONFIG_RANDOM_KMALLOC_CACHES=y
+CONFIG_SECURITY=y
+CONFIG_SECURITY_YAMA=y
+CONFIG_SECURITY_LANDLOCK=y
+CONFIG_SECURITY_LOCKDOWN_LSM=y
+# CONFIG_LEGACY_TIOCSTI is not set
+
+# --- Page-table isolation (named per upstream; merge drops unknown) ---
+CONFIG_PAGE_TABLE_ISOLATION=y
+
+# --- Memory ---
+CONFIG_LRU_GEN=y
+CONFIG_LRU_GEN_ENABLED=y
+CONFIG_TRANSPARENT_HUGEPAGE=y
+CONFIG_TRANSPARENT_HUGEPAGE_MADVISE=y
+
+# --- Scheduler / cpufreq defaults ---
+CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL=y

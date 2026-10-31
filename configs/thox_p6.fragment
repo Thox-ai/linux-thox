@@ -1,0 +1,37 @@
+# linux-thox config fragment — class P6 (performance+ devices)
+# Merged over the upstream arm64 defconfig for Linux 6.6.161 by
+# tools/build-linux-thox.sh. Intent area 4 (hardening) of ../PATCHES.md,
+# plus headroom settings for the 6 GB floor and capture-adjacent workloads.
+# Config intent for the future thox_p6_defconfig, not the defconfig itself.
+
+# --- KSPP hardening baseline ---
+CONFIG_BUG=y
+CONFIG_STRICT_KERNEL_RWX=y
+CONFIG_STRICT_MODULE_RWX=y
+CONFIG_MODULE_SIG=y
+CONFIG_HARDENED_USERCOPY=y
+CONFIG_FORTIFY_SOURCE=y
+CONFIG_STACKPROTECTOR_STRONG=y
+CONFIG_INIT_ON_ALLOC_DEFAULT_ON=y
+CONFIG_INIT_ON_FREE_DEFAULT_ON=y
+CONFIG_RANDOM_KMALLOC_CACHES=y
+CONFIG_SECURITY=y
+CONFIG_SECURITY_YAMA=y
+CONFIG_SECURITY_LANDLOCK=y
+CONFIG_SECURITY_LOCKDOWN_LSM=y
+# CONFIG_LEGACY_TIOCSTI is not set
+# CONFIG_DEVMEM is not set
+
+# --- dm-verity support (verified boot chain for A/B slots) ---
+CONFIG_DM_VERITY=y
+
+# --- Memory (6 GB floor: MGLRU on, THP madvise) ---
+CONFIG_ZRAM=y
+CONFIG_ZSMALLOC=y
+CONFIG_LRU_GEN=y
+CONFIG_LRU_GEN_ENABLED=y
+CONFIG_TRANSPARENT_HUGEPAGE=y
+CONFIG_TRANSPARENT_HUGEPAGE_MADVISE=y
+
+# --- Scheduler / cpufreq defaults ---
+CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL=y
