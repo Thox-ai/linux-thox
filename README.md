@@ -86,12 +86,12 @@ GPL-2.0-only. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).
 
 ## Legal
 
-Copyright (c) 2024-2026 THOX.ai LLC. All rights reserved.
+Copyright (c) 2024-2026 THOX.ai LLC.
 
 **THOX.ai LLC**
 - CTO: Tommy Xaypanya
 - CEO: Craig Ross
 
-Proprietary and confidential — see [LICENSE](LICENSE) for terms. No public distribution without prior written approval from THOX.ai LLC.
+This packaging and THOX-authored materials in this repository are distributed under the GNU General Public License version 2 only, as stated in [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md). Upstream Linux kernel sources retain their own GPL-2.0-only (WITH Linux-syscall-note) terms.
 
-Unauthorized copying, modification, merger, publication, distribution, sublicensing, and/or selling of this software, via any medium, is strictly prohibited without prior written consent from THOX.ai LLC.
+THOX and related marks are trademarks of THOX.ai LLC. The GPL grant covers the software; it does not grant trademark rights.
