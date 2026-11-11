@@ -92,6 +92,7 @@ Copyright (c) 2024-2026 THOX.ai LLC. All rights reserved.
 - CTO: Tommy Xaypanya
 - CEO: Craig Ross
 
-Proprietary and confidential — see [LICENSE](LICENSE) for terms. No public distribution without prior written approval from THOX.ai LLC.
-
-Unauthorized copying, modification, merger, publication, distribution, sublicensing, and/or selling of this software, via any medium, is strictly prohibited without prior written consent from THOX.ai LLC.
+This packaging is licensed under the GNU General Public License, version 2
+only (GPL-2.0-only). See [LICENSE](LICENSE) for terms. The trademark policy
+above is separate from the copyright license: the GPL covers the code, not
+the THOX marks.
